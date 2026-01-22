@@ -1,0 +1,36 @@
+name: Arcade-Maschine
+services:
+    supermario:
+      container_name: supermario
+      image: sevenajay/mario:latest
+      ports:
+          - ${marioPort}:80
+      restart: always
+
+
+    tetris:
+      ports:
+          - ${tetrisPort}:80    #.env file!
+      container_name: tetris
+      image: bsord/tetris
+      restart: always
+      env_file:
+        - .env
+
+    pacman:
+      image: yuravorobei/pacman-web:latest
+      container_name: pacman
+      ports:
+        - ${pacmanPort}:80
+      restart: always
+
+    nginx:
+      image: nginx
+      container_name: game-selector
+      ports:
+          - ${nginxPort}:80
+      restart: always
+      volumes:
+        - ${website}/:/usr/share/nginx/html/  #.env file!
+      env_file:
+        - .env
