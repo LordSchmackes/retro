@@ -28,7 +28,7 @@ All ports can be customized via the `.env` file.
 
 ### 1. Nginx (Game Selector)
 - **Container Name:** `game-selector`
-- **Image:** `nginx:latest`
+- **Image:** `nginx`
 - **Port:** `8080` (configurable via `nginxPort`)
 - **Purpose:** Serves the game selection interface
 - **Features:** 
@@ -198,6 +198,6 @@ This project uses the following Docker images:
 - `vijaygiduthuri/mario:latest`
 - `bsord/tetris`
 - `yuravorobei/pacman-web:latest`
-- `nginx:latest`
+- `nginx`
 
 Please refer to the individual image repositories for their respective licenses.
