@@ -2,7 +2,7 @@ name: Arcade-Maschine
 services:
     supermario:
       container_name: supermario
-      image: vijaygiduthuri/mario:latest
+      image: schmackes/supermario:latest
       ports:
           - ${marioPort}:80   #.env file!
       restart: always
