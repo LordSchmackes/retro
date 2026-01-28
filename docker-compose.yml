@@ -4,7 +4,7 @@ services:
       container_name: supermario
       image: schmackes/supermario:latest
       ports:
-          - ${marioPort}:80   #.env file!
+          - ${marioPort}:8080   #.env file!
       restart: always
 
 
